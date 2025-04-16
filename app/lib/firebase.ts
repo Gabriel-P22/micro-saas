@@ -12,8 +12,6 @@ const decodedKey = Buffer.from(
     "base64"
 ).toString("utf-8");
 
-console.log(decodedKey)
-
 export const firebaseCert = cert({
     projectId: process.env.FIREBASE_PROJECT_ID,
     clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
@@ -27,5 +25,5 @@ if (!getApps().length) {
     });
 }
 
-// export const db = getFirestore();
+export const db = getFirestore();
 // export const storage = getStorage().bucket();

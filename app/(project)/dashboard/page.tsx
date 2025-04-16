@@ -1,5 +1,6 @@
 import { handlerAuth } from "@/app/actions/handler-auth";
 import { auth } from "@/app/lib/auth";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 
 export default async function Login() {
@@ -30,6 +31,8 @@ export default async function Login() {
                     </form>
                 )
             }
+
+            <Link href="payment"> Payment </Link>
         </div>
     )
 }
